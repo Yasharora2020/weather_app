@@ -31,7 +31,7 @@ if data["cod"] != "404":
     st.write("Current Wind Speed:", data["wind"]["speed"])
     st.write("Current Weather:", data["weather"][0]["description"])
     components.html(sunrise_icon, height=20, width=20)
-    st.write("Sunrise:", datetime.datetime.fromtimestamp(data["sys"]["sunrise"]).strftime('%H:%M'))
+    st.write(f"{fa.icons['fa-sun-o']} Sunrise:", datetime.datetime.fromtimestamp(data["sys"]["sunrise"]).strftime('%H:%M'))
     st.write("Sunset:", datetime.datetime.fromtimestamp(data["sys"]["sunset"]).strftime('%H:%M'))
     #st.write(f"{fa.icons['sun-o']} Sunrise: {datetime.datetime.fromtimestamp(data['sys']['sunrise']).strftime('%H:%M')}")
 
